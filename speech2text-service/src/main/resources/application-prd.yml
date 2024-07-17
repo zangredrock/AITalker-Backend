@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    consul:
+      host: consul-service
+      port: 8500
+      config:
+        enabled: true
+  config:
+    import: optional:consul:consul-service:8500

@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: text2speech-service
+  profiles:
+    active: dev
+
+server:
+  port: 8082
+
+aws:
+  polly:
+    appkey: <YOUR_POLLY_APPKEY_HERE>
+    appsecret: <YOUR_POLLY_APPSECRET_HERE>
+
+logging:
+  level:
+    com.rocky.text2speechservice: debug
+  pattern:
+    dateformat: MM-dd HH:MM:ss:SSS

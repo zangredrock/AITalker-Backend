@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: coordinator-service
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: <YOUR_DB_URL_HERE>
+    username: <YOUR_RDS_USERNAME_HERE>
+    password: <YOUR_RDS_PASSWORD_HERE>
+
+server:
+  port: 8080
+
+mybatis:
+  type-aliases-package: com.rocky.coordinatorservice.model
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com.rocky.coordinatorservice: debug
+  pattern:
+    dateformat: MM-dd HH:MM:ss:SSS
+
+aws:
+  dynamodb:
+    url: https://dynamodb.us-east-1.amazonaws.com
+    region: us-east-1
+    appkey: <YOUR_DYNAMODB_APPKEY_HERE>
+    appsecret: <YOUR_DYNAMODB_APPSECRET_HERE>

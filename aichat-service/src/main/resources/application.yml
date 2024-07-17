@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: aichat-service
+  profiles:
+    active: dev
+
+server:
+  port: 8081
+
+azure:
+  openai:
+    appkey: <YOUR_AZURE_OPENAI_APPKEY_HERE>
+    url: <YOUR_AZURE_OPENAI_URL_HERE>
+    model: <YOUR_AZURE_OPENAI_MODEL_HERE>
+
+logging:
+  level:
+    com.rocky.aichatservice: debug
+  pattern:
+    dateformat: MM-dd HH:MM:ss:SSS

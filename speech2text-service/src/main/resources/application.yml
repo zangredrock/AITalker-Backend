@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: speech2text-service
+  profiles:
+    active: dev
+
+server:
+  port: 8083
+
+aws:
+  transcribe:
+    appkey: <YOUR_TRANSCRIBE_APPKEY_HERE>
+    appsecret: <YOUR_TRANSCRIBE_APPSECRET_HERE>
+
+logging:
+  level:
+    com.rocky.speech2textservice: debug
+  pattern:
+    dateformat: MM-dd HH:MM:ss:SSS
